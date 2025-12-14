@@ -2,6 +2,17 @@
 
 A RAG (Retrieval-Augmented Generation) pipeline project using FastAPI and Qdrant.
 
+## Prerequisites & Local LLM Setup (Ollama)
+
+This project uses **Ollama** to run the Large Language Model (LLM) locally.
+
+1.  **Install Ollama**: Download and install from [ollama.com](https://ollama.com).
+2.  **Pull the Model**: Open your terminal and run:
+    ```bash
+    ollama pull llama3.1:8b
+    ```
+3.  **Start Ollama**: Ensure Ollama is running (it usually starts automatically, or run `ollama serve`).
+
 ## Setup and Run
 
 1.  Make sure you have Docker and Docker Compose installed.
