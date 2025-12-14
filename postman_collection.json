@@ -1,0 +1,145 @@
+{
+    "info": {
+        "_postman_id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+        "name": "Simple RAG",
+        "description": "Collection for testing Simple RAG API endpoints.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8000/health",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "health"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Upsert Document",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"text\": \"Qdrant is a vector database that supports high-dimensional vector search. It is written in Rust.\",\n    \"metadata\": {\n        \"source\": \"manual_test\"\n    }\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/upsert",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "upsert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Bulk Upsert",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"documents\": [\n        {\n            \"text\": \"FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+.\"\n        },\n        {\n            \"text\": \"Ollama allows you to run open-source large language models, such as Llama 3, locally.\"\n        }\n    ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/bulk_upsert",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "bulk_upsert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Ingest URL",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"url\": \"https://www.ibm.com/think/topics/ai-agents\"\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/ingest_url",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "ingest_url"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Query",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"query\": \"What are AI agents?\",\n    \"top_k\": 3\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8000/query",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "query"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

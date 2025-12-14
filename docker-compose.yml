@@ -19,6 +19,9 @@ services:
     environment:
       - QDRANT_HOST=qdrant
       - QDRANT_PORT=6333
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      # Use host.docker.internal to reach Ollama running on the Mac host
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
     volumes:
       - ./app:/app
 

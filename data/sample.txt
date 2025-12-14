@@ -1,0 +1,7 @@
+This is a sample text file used for testing the ingestion pipeline of the RAG Antigravity project.
+It contains enough text to verify chunking behavior.
+Generative AI allows for the creation of new content based on learned patterns.
+Vector databases store high-dimensional vectors for fast similarity search.
+FastAPI is a great framework for building APIs.
+We are testing overlap and chunk sizes.
+End of file.

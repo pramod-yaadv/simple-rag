@@ -3,3 +3,15 @@ uvicorn
 requests
 qdrant-client
 sentence-transformers
+PyPDF2
+openai
+numpy
+pydantic
+openai
+pytest
+
+pytest
+httpx
+python-multipart
+beautifulsoup4
+requests
