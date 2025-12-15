@@ -13,6 +13,15 @@ This project uses **Ollama** to run the Large Language Model (LLM) locally.
     ```
 3.  **Start Ollama**: Ensure Ollama is running (it usually starts automatically, or run `ollama serve`).
 
+### System Requirements
+
+To ensure smooth performance with local LLMs (Llama 3.1 8B):
+
+-   **RAM**: 8GB minimum (16GB recommended).
+-   **CPU**: Apple Silicon (M1/M2/M3) or modern Intel/AMD CPU with AVX2 support.
+-   **Disk Space**: ~10GB free space for Docker images and model weights.
+-   **GPU (Optional)**: NVIDIA GPU (6GB+ VRAM) for accelerated inference on non-Mac systems.
+
 ## Setup and Run
 
 1.  Make sure you have Docker and Docker Compose installed.
